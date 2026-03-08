@@ -1,22 +1,26 @@
 import React from 'react'
 import Banner from '../Banner/page.js'
 import Post from './Post/page.js'
-import array from '../Array/Blog.js'
+import array from '../Data/Blog.js'
 import { IoSearch } from "react-icons/io5";
 import Link from 'next/link.js';
-const Blog = () => {
+const Blog = async({params}) => {
   const posts = array.slice(0,5).map((item,index)=>{
     return <Post key={index} heading={item.heading} date={item.date} image={item.image} />
   })
+
+ 
+  
   return (
     <>
     <Banner content={'BLOG'}/>
-    <div className='w-screen bg-black pt-25 '>
-      <div className='max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center lg:items-start  lg:justify-between'>
-      <ul className=' lg:max-w-7/10 w-full rounded-xl overflow-hidden px-6 bg-black flex flex-col items-center '>
+    <div className='w-full bg-black '>
+      <div className='w-full max-w-7xl mx-auto grid grid-cols-1
+      gap-10 lg:grid-cols-[2fr_1fr] py-10 px-5'>
+      <ul className='space-y-8 w-full max-w-3xl lg:max-w-none mx-auto lg:mx-0 '>
       {posts}
       </ul>
-      <div className='w-full lg:max-w-3/10 py-10 bg-black px-5 lg:px-0 '>
+      <aside className='w-full max-w-3xl lg:max-w-none mx-auto lg:mx-0 '>
       <div className='flex items-center bg-purple-950 py-3 px-4 '>
         <input type='text' placeholder='Search' className='flex-1 text-white outline-0'  />
         <button className='text-xl text-purple-500 hover:text-white'><IoSearch /></button>
@@ -49,7 +53,7 @@ const Blog = () => {
         </div>
       </div>
 
-      </div>
+      </aside>
       
     </div>
     </div>

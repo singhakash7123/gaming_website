@@ -13,11 +13,11 @@ const Navbar = () => {
     <nav className='w-full bg-black/65 hidden lg:flex items-center justify-between px-8 py-5'>
         <h1 className='font-extrabold text-white text-3xl tracking-wider'>TINJA</h1>
         <ul className='hidden lg:flex  items-center gap-x-8 w-full justify-center'>
-            <li className='font-semibold text-xs hover:text-purple-400 transition-all duration-300  text-white'> <Link href={'/'}> HOME + </Link> </li>
-            <li className='font-semibold text-xs hover:text-purple-400 transition-all duration-300  text-white'> <Link href={'/'}> TOURNAMENT + </Link> </li>
-            <li className='font-semibold text-xs hover:text-purple-400 transition-all duration-300  text-white'> <Link href={'/PortFolio'}> PORTFOLIO + </Link> </li>
-            <li className='font-semibold text-xs hover:text-purple-400 transition-all duration-300  text-white'> <Link href={'/Shop'}> SHOP + </Link> </li>
-            <li className='font-semibold text-xs hover:text-purple-400 transition-all duration-300  text-white'> <Link href={'/Blog'}> BLOG + </Link> </li>
+            <li className='font-semibold text-xs hover:text-purple-400 transition-all duration-300  text-white'> <Link href={'/'}> HOME  </Link> </li>
+            <li className='font-semibold text-xs hover:text-purple-400 transition-all duration-300  text-white'> <Link href={'/'}> PAGES + </Link> </li>
+            <li className='font-semibold text-xs hover:text-purple-400 transition-all duration-300  text-white'> <Link href={'/PortFolio'}> PORTFOLIO  </Link> </li>
+            <li className='font-semibold text-xs hover:text-purple-400 transition-all duration-300  text-white'> <Link href={'/Shop'}> SHOP </Link> </li>
+            <li className='font-semibold text-xs hover:text-purple-400 transition-all duration-300  text-white'> <Link href={'/Blog'}> BLOG </Link> </li>
             <li className='font-semibold text-xs hover:text-purple-400 transition-all duration-300  text-white'> <Link href={'/Contact'}> CONTACT </Link> </li>
         </ul>
 

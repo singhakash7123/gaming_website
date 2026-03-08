@@ -1,36 +1,41 @@
-import React from 'react'
+
+import React  from 'react'
 import Banner from '../Banner/page.js'
 import ShopItems from './ShopItems/page.js'
 import { IoSearch } from "react-icons/io5";
-import array from '../Array/Shop.js'
-const Shop = () => {
-  const ShopArray = array.map((item)=>{
-    return(
-      <ShopItems type = {item.item_type} key={item.id} price={item.price} image={item.image}/>
+import array from '../Data/Shop.js'
+import categoryArray from '../Data/Category.js'
+import ProductCategory from '../Data/ProductCategory.js'
+import ItemCategory from './ItemCategory/page.js';
+import Tags from './Tags/page.js';
+import Category from '../../Component/Category/page.js';
+const Shop =  async () => {
+  
+  const categories = [ ... new Set(array.map((p)=>p.item_type))]
+  
+  
+ 
+  
+const renderItems = array.map((item)=>
+      <ShopItems key={item.id} type={item.item_type} price={item.price} image={item.image} slug={item.slug} />
     )
-  })
   return (
     <>
       <Banner content='SHOP'/>
-     <div className='w-screen bg-black'>
-        <div className='max-w-7xl w-full mx-auto py-20 flex flex-col lg:flex-row  items-center lg:items-start bg-black justify-between  ' >
-          <ul className='max-w-3xl  w-full flex flex-wrap items-center justify-center gap-8'>
-         {ShopArray}
+     <div className='w-full bg-black py-20 px-5'>
+        <div className='max-w-7xl w-full bg-black mx-auto grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-x-10 gap-y-20 ' >
+          <ul className='w-full grid sm:grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-10 max-w-2xl lg:max-w-none mx-auto'>
+          {renderItems}
           </ul>
-          <div className='max-w-3xl lg:max-w-125 w-full bg-black py-10 px-5 mt-20 lg:mt-0 '>
-            <div className=' max-w-3xl mx-auto border border-white flex items-center rounded-lg '>
+          <aside className=' bg-black w-full max-w-2xl lg:max-w-none mx-auto lg:mx-0 '>
+            <div className='  border border-white flex items-center rounded-lg '>
               <input type='text' placeholder='Search Products' className='text-gray-400 p-3 w-full outline-0'/>
               <button className='bg-purple-500 text-white text-3xl p-3 rounded-lg'><IoSearch /></button>
             </div>
 
             <ul className='w-full text-white font-bold mt-6'>
               <li className=' mt-4 text-2xl text-white '>Product Categories</li>
-              <li className=' hover:text-purple-500 mt-4 w-full text-lg' >All</li>
-              <li className=' hover:text-purple-500 mt-4 w-full text-lg' >Chair</li>
-              <li className=' hover:text-purple-500 mt-4 w-full text-lg' >Headphone</li>
-              <li className=' hover:text-purple-500 mt-4 w-full text-lg' >Headset</li>
-              <li className=' hover:text-purple-500 mt-4 w-full text-lg' >Mouse</li>
-              <li className=' hover:text-purple-500 mt-4 w-full text-lg' >T-Shirt</li>
+              <Category basepath={'/Shop'} categories={categories} containerStyle = 'flex flex-col items-start gap-4 text-lg mt-8'/>
               
 
             </ul>
@@ -38,15 +43,10 @@ const Shop = () => {
             <div className='mt-8'>
               <h2 className='text-white font-extrabold text-xl'>PRODUCTS TAGS</h2>
               <div className='flex items-center gap-3 flex-wrap mt-5'>
-                <button className='hover:bg-purple-500 hover:text-white text-gray-400 font-extrabold border border-gray-400 p-2 text-sm rounded-3xl ' >CHAIR</button>
-              <button className='hover:bg-purple-500 hover:text-white text-gray-400 font-extrabold border border-gray-400 p-2 text-sm rounded-3xl ' >ESPORTS</button>
-              <button className='hover:bg-purple-500 hover:text-white text-gray-400 font-extrabold border border-gray-400 p-2 text-sm rounded-3xl ' >GAMES</button>
-              <button className='hover:bg-purple-500 hover:text-white text-gray-400 font-extrabold border border-gray-400 p-2 text-sm rounded-3xl ' >HEADPHONES</button>
-              <button className='hover:bg-purple-500 hover:text-white text-gray-400 font-extrabold border border-gray-400 p-2 text-sm rounded-3xl ' >HEADSET</button>
-              <button className='hover:bg-purple-500 hover:text-white text-gray-400 font-extrabold border border-gray-400 p-2 text-sm rounded-3xl ' >MOUSE</button>
+            
               </div>
             </div>
-          </div>
+          </aside>
         </div>
      
 </div>
