@@ -4,29 +4,29 @@ import Banner from "../../../Banner/page.js";
 import { FaStar } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import array from "../../../Data/Shop.js";
-import ShopItems from "../../ShopItems/page.js";
+// import ShopItems from "../../ShopItems/page.js";
 import Category from "../../../../Component/Category/page.js";
-import Image from "next/image.js";
-const page = async ({params,searchParams}) => {
+import Image from "next/image";
+const page =  ({params,searchParams}) => {
   
    
       const categories = [...new Set(array.map((p) => p.item_type))];
-  const { ShopFilter, ItemDetails } = await params;
-  const { image } = await searchParams;
+  const { ShopFilter, ItemDetails } = params;
+  const { image } =  searchParams || {};
 
-  const filtered = array.filter((item) => {
-    if (ShopFilter) return item.item_type === ShopFilter;
-    else return true;
-  });
+  // const filtered = array.filter((item) => {
+  //   if (ShopFilter) return item.item_type === ShopFilter;
+  //   else return true;
+  // });
 
-  const renderItems = filtered.map((item) => (
-    <ShopItems
-      key={item.id}
-      type={item.item_type}
-      price={item.price}
-      image={item.image}
-    />
-  ));
+  // const renderItems = filtered?.map((item) => (
+  //   <ShopItems
+  //     key={item.id}
+  //     type={item.item_type}
+  //     price={item.price}
+  //     image={item.image}
+  //   />
+  // ));
 
   return (
     <>

@@ -5,16 +5,16 @@ import { IoSearch } from "react-icons/io5";
 import array from "../../Data/Shop.js";
 import ShopItems from "../ShopItems/page.js";
 import Category from "../../../Component/Category/page.js";
-const page = async ({ params }) => {
+const page =  ({ params }) => {
   const categories = [...new Set(array.map((p) => p.item_type))];
-  const { ShopFilter } = await params;
+  const { ShopFilter } =  params;
 
   const filtered = array.filter((item) => {
     if (ShopFilter) return item.item_type === ShopFilter;
     else return true;
   });
 
-  const renderItems = filtered.map((item) => (
+  const renderItems = filtered?.map((item) => (
     <ShopItems
       key={item.id}
       type={item.item_type}
