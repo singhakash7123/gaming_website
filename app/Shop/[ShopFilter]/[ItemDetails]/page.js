@@ -7,13 +7,16 @@ import array from "../../../Data/Shop.js";
 // import ShopItems from "../../ShopItems/page.js";
 import Category from "../../../../Component/Category/page.js";
 import Image from "next/image";
-const page =  ({params,searchParams}) => {
+const page = async ({params,searchParams}) => {
   
    
       const categories = [...new Set(array.map((p) => p.item_type))];
-  const { ShopFilter, ItemDetails } = params;
-  const { image } =  searchParams || {};
-
+  const { ShopFilter, ItemDetails } = await params;
+  const shopFilter = decodeURIComponent(ShopFilter)
+  const itemDetails = decodeURIComponent(ItemDetails)
+  const { image } = await searchParams ;
+  console.log(shopFilter,itemDetails);
+  console.log(image);
   // const filtered = array.filter((item) => {
   //   if (ShopFilter) return item.item_type === ShopFilter;
   //   else return true;

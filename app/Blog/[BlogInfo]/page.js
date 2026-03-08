@@ -5,10 +5,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 const page = async({params,searchParams}) => {
  
-  const {BlogInfo} =  params
+  const {BlogInfo} = await params
   const result = decodeURIComponent(BlogInfo)
  console.log(result);
- const {image} =  searchParams || {};
+ const {image} = await searchParams;
   // const img = decodeURIComponent(await searchParams)
   
  
