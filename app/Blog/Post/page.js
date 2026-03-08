@@ -11,7 +11,7 @@ const Post = ({heading,date,image}) => {
         <Image src={image} alt='image' fill className='object-cover hover:scale-120 transition-all duration-300 ease-in-out' />
     </div>
     <div className='p-8 bg-black'>
-        <Link href={`/Blog/${heading}`} className='hover:text-purple-600 text-3xl text-white font-extrabold '>
+        <Link href={`/Blog/${heading}?image=${image.src}`} className='hover:text-purple-600 text-3xl text-white font-extrabold '>
            {heading}
         </Link>
         <p className='mt-3'> 

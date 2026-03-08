@@ -3,7 +3,14 @@ import Banner from '../../Banner/page'
 import { IoSearch } from "react-icons/io5";
 import Link from 'next/link';
 import Image from 'next/image';
-const page = () => {
+const page = async({params,searchParams}) => {
+ 
+  const {BlogInfo} = await params
+  const result = decodeURIComponent(BlogInfo)
+ console.log(result);
+ const {image} = await searchParams;
+  // const img = decodeURIComponent(await searchParams)
+  console.log(image);
  
   return (
     <>
@@ -11,14 +18,14 @@ const page = () => {
     <div className='w-screen bg-black pt-25 '>
       <div className='max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center lg:items-start  lg:justify-between pb-20'>
       <div className=' lg:max-w-7/10 w-full rounded-xl overflow-hidden px-6 bg-black'>
-        <div className='w-9/10 aspect-5/2 bg-red-400 '>
-            
+        <div className='w-9/10 aspect-5/2 bg-red-400 relative '>
+            <Image src={image} alt='image' fill className='object-cover'/>
         </div>
 
         <p className='flex items-center gap-x-8 text-gray-500  mt-8 font-semibold'><span className='text-purple-500'>TINJA</span> <span> October 23, 2023</span></p>
 
         <p className='text-gray-500 mt-8'>
-          Gameplay Chronicles: Unveiling Digital Realms” is a captivating blog that offers readers a deeper insight into the fascinating world of gaming. Whether you’re a casual gamer, a dedicated player, or someone who’s just curious about the gaming universe, this blog has something to offer. Here are some details about what you can expect from this blog:
+         {result} is a captivating blog that offers readers a deeper insight into the fascinating world of gaming. Whether you’re a casual gamer, a dedicated player, or someone who’s just curious about the gaming universe, this blog has something to offer. Here are some details about what you can expect from this blog:
         </p>
         
         <h3 className='font-bold text-2xl text-white mt-2'>1. Game Reviews and Analysis:</h3>

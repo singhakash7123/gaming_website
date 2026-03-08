@@ -4,7 +4,6 @@ import Image from "next/image";
 import image from "../../../Image/GameDetails.jpg"
 const page = async({params}) => {
   const{GameFilter,GameDetails} = await params
-  console.log(GameFilter,GameDetails);
   const Game = decodeURIComponent(GameDetails)
   return (
     <>
