@@ -3,8 +3,9 @@ import Banner from "../../../Banner/page";
 import Image from "next/image";
 import image from "../../../Image/GameDetails.jpg"
 const page = async({params}) => {
-  const{GameFilter,GameDetails} = await params
+  const {GameFilter,GameDetails} = await params
   const Game = decodeURIComponent(GameDetails)
+ 
   return (
     <>
       <Banner content={Game} />
