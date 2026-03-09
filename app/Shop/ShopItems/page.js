@@ -9,9 +9,9 @@ console.log(slug);
           <Image src={image} alt='image' fill className='object-cover'/>
         </div>
         <div className='mt-5'>
-            <h3 className='text-white font-extrabold text-xl'>{type}</h3>
+           
+            <Link href={`/Shop/${encodeURIComponent(type)}/${slug}?image=${image?.src}`} className='text-white font-extrabold text-xl hover:text-purple-500 '>{type}</Link>
             <h5 className='text-white font-extrabold text-xl mt-2 mb-5'>{price}</h5>
-            <Link href={`/Shop/${encodeURIComponent(type)}/${slug}?image=${image?.src}`} className='text-white font-extrabold  bg-purple-500 mt-8 py-2 px-6 rounded-lg '>Add to Cart</Link>
         </div>
     </li>
   )

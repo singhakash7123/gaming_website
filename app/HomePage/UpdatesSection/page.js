@@ -2,6 +2,7 @@ import React from 'react'
 import { MdOutlineArrowOutward } from "react-icons/md";
 import community from '../../Image/community.jpg'
 import Image from 'next/image';
+import Link from 'next/link';
 const Updates = () => {
   return (
     <section className='bg-black text-white py-24'>
@@ -19,7 +20,7 @@ const Updates = () => {
                 <p className='mt-4 text-[15px]'>Gameplay Chronicles: Unveiling Digital Realms” is a captivating blog that offers readers a deeper insight into the fascinating world of gaming. Whether you’re a casual gamer, a dedicated player, or someone who’s just curious about the gaming universe, this blog has something to offer. Here are some details about what you can expect from this</p>
                 </div>
                 <div className='basis-1/8 flex items-center justify-end lg:ml-auto'>
-                <span className=' text-3xl lg:text-5xl p-4 rounded-full border-2 border-purple-500 hover:bg-purple-500 '><MdOutlineArrowOutward /></span>
+                <Link href={'/Blog'} className=' text-3xl lg:text-5xl p-4 rounded-full border-2 border-purple-500 hover:bg-purple-500 '><MdOutlineArrowOutward /></Link>
                 </div>
             </div>
            

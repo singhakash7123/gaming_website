@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import HeroImg from '../../Image/Call_of_Duty.jpg'
+import Link from 'next/link'
 const Hero = () => {
   return (
     <section className='min-h-screen w-screen  flex items-center justify-start bg-black'>
@@ -17,8 +18,8 @@ const Hero = () => {
             </p>
 
             <div className='flex flex-col sm:flex-row items-start sm:items-center justify-start mt-10 gap-4 flex-wrap'>
-                <button className='font-semibold text-white px-3 lg:px-6 py-1.5 lg:py-3 border-2   border-purple-500  bg-purple-500 hover:bg-purple-600 -skew-x-25 '>BUY NOW </button>
-                <button className='font-semibold text-white px-3 lg:px-6 py-1.5 lg:py-3 border-2  border-white -skew-x-25 '>WATCH TRAILER</button>
+                <Link href={'/Shop'} className='font-semibold text-white px-3 lg:px-6 py-1.5 lg:py-3 border-2   border-purple-500  bg-purple-500 hover:bg-purple-600 -skew-x-25 '>BUY NOW </Link>
+                <a href='https://youtu.be/tv7LfFeamsc' className='font-semibold text-white px-3 lg:px-6 py-1.5 lg:py-3 border-2  border-white -skew-x-25 '>WATCH TRAILER</a>
             </div>
         </div>
     </section>

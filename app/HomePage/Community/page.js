@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import HeroImg from '../../Image/Hero.jpg'
+import Link from 'next/link'
 const Community = () => {
   return (
     <section className='min-h-screen  bg-black py-8 lg:py-0'>
@@ -18,7 +19,7 @@ const Community = () => {
             <p className='text-sm lg:text-xm'>Our community is full of experienced players who love to share strategies, tips, and tricks for mastering the game. Whether you need help tackling a difficult boss, finding hidden treasures, or optimizing your elemental powers, you will find a wealth of knowledge and support here.</p>
             <p className='mt-3 text-sm lg:text-xm '>Gain insights from fellow Guardians, share your own tips, and collaborate on in-game challenges and quests.</p>
             <p className='mt-3 mb-6 text-sm lg:text-xm '>Be the first to know about exclusive community events, including in-game challenges, contests, and giveaways.</p>
-            <button className='bg-purple-500 px-10 py-4 text-sm font-bold -skew-x-25 hover:bg-purple-600 '>EXPLORE MORE</button>
+            <Link href={'/About'} className='bg-purple-500 px-10 py-4 text-sm font-bold -skew-x-25 hover:bg-purple-600 '>EXPLORE MORE</Link>
             </div>
         </div>
     </section>

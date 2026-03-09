@@ -7,6 +7,7 @@ import array from "../../../Data/Shop.js";
 // import ShopItems from "../../ShopItems/page.js";
 import Category from "../../../../Component/Category/page.js";
 import Image from "next/image";
+import CartCount from '../../../../Component/CartCount/page.js'
 const page = async ({params,searchParams}) => {
   
    
@@ -55,6 +56,7 @@ const page = async ({params,searchParams}) => {
             <p className="font-extrabold text-gray-500  text-[17px]">Availability: <span className="text-white">N/A</span> </p>
             <p className="font-extrabold text-gray-500  text-[17px]">Category: <span className="text-purple-500">{ShopFilter}</span> </p>
             <div className=" text-gray-500 font-bold">Tags: <span  className="border-2 rounded-2xl p-1 border-white hover:bg-purple-500 hover:text-white">ESPORTS</span> , <span className="border-2 rounded-2xl p-1 border-white hover:bg-purple-500 hover:text-white">GAMES</span> </div>
+            
            </div>
           </div>
           <aside className=" bg-black w-full max-w-2xl lg:max-w-none mx-auto lg:mx-0 ">
