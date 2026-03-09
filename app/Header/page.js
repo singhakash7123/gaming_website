@@ -22,8 +22,8 @@ const Navbar = () => {
         </ul>
 
         <div className='flex items-center gap-x-8'>
-            <Link href={'/Cart'} className=' hover:text-purple-400 transition-all duration-300 flex items-center justify-center text-2xl font-extrabold text-white'><PiShoppingCartSimpleBold /></Link>
-            <button className=' hover:text-purple-400 transition-all duration-300 flex items-center justify-center text-2xl font-extrabold text-white'><IoSearch /></button>
+            <Link href={'/'} className=' hover:text-purple-400 transition-all duration-300 flex items-center justify-center text-2xl font-extrabold text-white'></Link>
+            <button className=' hover:text-purple-400 transition-all duration-300 flex items-center justify-center text-2xl font-extrabold text-white'></button>
             {/* <span className=' hover:text-purple-400 transition-all duration-300 flex items-center justify-center text-2xl font-extrabold text-white'><CgMenuRight /></span> */}
         </div>
     </nav>

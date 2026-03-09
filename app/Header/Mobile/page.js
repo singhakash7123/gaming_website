@@ -23,7 +23,7 @@ const MobileMenu = () => {
                 <li className='w-full flex items-center justify-between font-semibold text-xm border-b-2 border-gray-800 hover:text-purple-400 transition-all duration-300  text-white'> <Link  onClick={()=>{setShowMenu(false)}} href={'/Shop'}> SHOP </Link>  </li>
                 <li className='w-full flex items-center justify-between font-semibold text-xm border-b-2 border-gray-800 hover:text-purple-400 transition-all duration-300  text-white'> <Link onClick={()=>{setShowMenu(false)}}  href={'/Blog'}> BLOG </Link>  </li>
                 <li className='w-full flex items-center justify-between font-semibold text-xm border-b-2 border-gray-800 hover:text-purple-400 transition-all duration-300  text-white'> <Link onClick={()=>{setShowMenu(false)}}  href={'/Contact'}> CONTACT </Link> </li>
-                <li className='w-full flex items-center gap-x-8 font-semibold text-xm  hover:text-purple-400 transition-all duration-300  text-white text-3xl'> <Link href={'/Cart'}><PiShoppingCartSimpleBold /> </Link> <button>  <IoSearch /> </button> </li>
+                <li className='w-full flex items-center gap-x-8 font-semibold text-xm  hover:text-purple-400 transition-all duration-300  text-white text-3xl'> <Link href={'/'}> </Link> <button></button> </li>
             </ul>
     
             <div className='flex items-center gap-x-8'>
