@@ -1,21 +1,21 @@
 
 import React from 'react'
 import Banner from '../Banner/page.js'
-import List from './List/page.js'
+import GameList from './GameList/page.js'
 import array from '../Data/PortFolio.js'
 import Category from '../../Component/Category/page.js'
 const PortFolio = async ({params}) => {
  
   const category = [ ...new Set(array.map(item=>item.category))]
   const {GameFilter} = await params
-  const filtered = array.filter((item)=>{
+  // const filtered = array.filter((item)=>{
    
-    if(GameFilter) return item.category === GameFilter ;
-    else return true
-  })
+  //   if(GameFilter) return item.category === GameFilter ;
+  //   else return true
+  // })
 
- const RenderLists = filtered.map((item)=>
-  <List key={item.id} content={item.name} image={item.image} category={item.category} />
+ const RenderLists = array.map((item)=>
+  <GameList  key={item.id} basepath='PortFolio' content={item.name} image={item.image} category={item.category} />
 )
   
   return (

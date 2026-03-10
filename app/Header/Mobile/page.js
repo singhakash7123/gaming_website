@@ -8,6 +8,11 @@ import Link from 'next/link';
 const MobileMenu = () => {
     // console.log('client')
   const [showMenu, setShowMenu] = useState(false) ;
+  const [show, setShow] = useState(false) ;
+  function Hide(){
+    setShow(false)
+    setShowMenu(false)
+  }
   return (
     <nav className='w-full bg-black/65 flex lg:hidden items-center justify-between px-8 py-5'>
             <h1 className='font-extrabold text-white text-3xl tracking-wider'>TINJA</h1>
@@ -18,7 +23,15 @@ const MobileMenu = () => {
               <button onClick={()=>{setShowMenu(false)}} className='text-2xl text-white'><RxCross1 /></button>
               </li>
                 <li className='w-full flex items-center justify-between font-semibold text-xm border-b-2 border-gray-800 hover:text-purple-400 transition-all duration-300  text-white '> <Link onClick={()=>{setShowMenu(false)}} href={'/'}> HOME</Link>  </li>
-                <li className='w-full flex items-center justify-between font-semibold text-xm border-b-2 border-gray-800 hover:text-purple-400 transition-all duration-300  text-white'> <Link onClick={()=>{setShowMenu(false)}}  href={'/'}> PAGES </Link> <span>+</span> </li>
+                <li className='w-full  font-semibold text-xm border-b-2 border-gray-800 hover:text-purple-400 transition-all duration-300  text-white'> <Link  onClick={()=>{setShow(!show)}}   href={'/'}> PAGES </Link> <span>+</span>
+                
+                 <ul onClick={Hide}   className={`space-y-4 bg-black/80 text-left py-5 ${show?'block':'hidden'}`} >
+                    <li><Link onClick={()=>{setShow(false)}} href={'/About'}>ABOUT</Link></li>
+                    <li><Link onClick={()=>{setShow(false)}} href={'/Team'}>TEAM</Link></li>
+                    <li><Link onClick={()=>{setShow(false)}} href={'/Testimonial'}>TESTIMONIAL</Link></li>
+                </ul>
+
+                 </li>
                 <li className='w-full flex items-center justify-between font-semibold text-xm border-b-2 border-gray-800 hover:text-purple-400 transition-all duration-300  text-white'> <Link onClick={()=>{setShowMenu(false)}}  href={'/PortFolio'}> PORTFOLIO </Link>  </li>
                 <li className='w-full flex items-center justify-between font-semibold text-xm border-b-2 border-gray-800 hover:text-purple-400 transition-all duration-300  text-white'> <Link  onClick={()=>{setShowMenu(false)}} href={'/Shop'}> SHOP </Link>  </li>
                 <li className='w-full flex items-center justify-between font-semibold text-xm border-b-2 border-gray-800 hover:text-purple-400 transition-all duration-300  text-white'> <Link onClick={()=>{setShowMenu(false)}}  href={'/Blog'}> BLOG </Link>  </li>

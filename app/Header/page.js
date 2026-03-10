@@ -5,6 +5,7 @@ import { CgMenuRight } from "react-icons/cg";
 import React from 'react'
 import MobileMenu from './Mobile/page';
 import Link from 'next/link';
+import Dropdown from './Dropdown/page';
 
 const Navbar = () => {
     // console.log('server')
@@ -14,7 +15,7 @@ const Navbar = () => {
         <h1 className='font-extrabold text-white text-3xl tracking-wider'>TINJA</h1>
         <ul className='hidden lg:flex  items-center gap-x-8 w-full justify-center'>
             <li className='font-semibold text-xs hover:text-purple-400 transition-all duration-300  text-white'> <Link href={'/'}> HOME  </Link> </li>
-            <li className='font-semibold text-xs hover:text-purple-400 transition-all duration-300  text-white'> <Link href={'/'}> PAGES + </Link> </li>
+            <Dropdown/>
             <li className='font-semibold text-xs hover:text-purple-400 transition-all duration-300  text-white'> <Link href={'/PortFolio'}> PORTFOLIO  </Link> </li>
             <li className='font-semibold text-xs hover:text-purple-400 transition-all duration-300  text-white'> <Link href={'/Shop'}> SHOP </Link> </li>
             <li className='font-semibold text-xs hover:text-purple-400 transition-all duration-300  text-white'> <Link href={'/Blog'}> BLOG </Link> </li>
