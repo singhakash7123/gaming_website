@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <>
       <Banner content={'CONTACT'}/>
-      <div className="bg-black w-screen py-20 ">
+      <div className="bg-black w-screen py-20 " data-aos="fade-up">
         <div className="bg-black max-w-6xl w-full mx-auto flex flex-col lg:flex-row  items-center lg:items-stretch  justify-between gap-y-12 lg:gap-y-0 px-8  ">
           <div className=" w-full lg:w-6/10">
             <h3 className="text-white text-3xl font-extrabold">GET IN TOUCH</h3>

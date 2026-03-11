@@ -14,7 +14,7 @@ const About = () => {
   return (
     <>
    <Banner content='ABOUT US' />
-   <div className='bg-black py-15'>
+   <div className='bg-black py-15' data-aos="fade-up">
       <div className='max-w-6xl mx-auto px-5 space-y-35'>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'> 
         {renderExperts}

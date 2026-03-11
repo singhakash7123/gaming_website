@@ -4,7 +4,7 @@ import Call_of_Duty from '../../Image/Call_of_Duty.jpg'
 import { ImQuotesLeft } from "react-icons/im";
 const Testimonials = () => {
   return (
-    <section className='w-screen bg-black relative'>
+    <section className='w-screen bg-black relative' data-aos="fade-up" >
          <Image src={Call_of_Duty}  alt='image' fill className='object-cover'/>
         <div className='max-w-6xl w-full min-h-screen mx-auto flex flex-col items-center justify-center text-white relative z-10 '>
            

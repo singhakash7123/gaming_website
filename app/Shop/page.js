@@ -22,7 +22,7 @@ const renderItems = array.map((item)=>
   return (
     <>
       <Banner content='SHOP'/>
-     <div className='w-full bg-black py-20 px-5'>
+     <div className='w-full bg-black py-20 px-5' data-aos="fade-up">
         <div className='max-w-7xl w-full bg-black mx-auto grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-x-10 gap-y-20 ' >
           <ul className='w-full grid sm:grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-10 max-w-2xl lg:max-w-none mx-auto'>
           {renderItems}

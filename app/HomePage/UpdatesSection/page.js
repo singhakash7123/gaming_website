@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 const Updates = () => {
   return (
-    <section className='bg-black text-white py-24'>
+    <section className='bg-black text-white py-24' data-aos="fade-up">
         <div className='max-w-6xl w-full mx-auto flex flex-col items-center '>
             <h5 className='text-purple-500 font-semibold'>UPDATES</h5>
             <h3 className='text-4xl font-extrabold'>LATEST NEWS</h3>

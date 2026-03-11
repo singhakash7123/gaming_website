@@ -10,6 +10,7 @@ import game_08 from '../Image/game_08.jpg'
 const portfolioData = [
   {
     name:"NIGHT OWL",
+    slug:"NIGHT-OWL",
     image:game_01,
     category:'offline',
 
@@ -17,24 +18,28 @@ const portfolioData = [
   },
   {
     name: "VRPLAY",
+    slug: "VRPLAY",
     image:game_02,
     category:'offline',
      id:2
   },
   {
     name: "GAMEDAY",
+    slug: "GAMEDAY",
     image:game_03,
     category:'offline',
      id:3
   },
   {
     name:"FIGHT ALONE",
+    slug:"FIGHT-ALONE",
     image:game_04,
     category:'online',
      id:4
   },
   {
     name:"TAXBLER",
+    slug:"TAXBLER",
     image:game_05,
 
     category:'online',
@@ -42,18 +47,21 @@ const portfolioData = [
   },
   {
     name:"TABEL UIREEL",
+    slug:"TABEL-UIREEL",
     image:game_06,
     category:'online',
      id:6
   },
   {
     name:"MITSTEY",
+    slug:"MITSTEY",
     image:game_07,
     category:'esports',
      id:7
   },
   {
     name:"FORTNTTIE",
+    slug:"FORTNTTIE",
     image:game_08,
     category:'esports',
      id:8

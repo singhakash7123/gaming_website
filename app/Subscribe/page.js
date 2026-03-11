@@ -3,7 +3,7 @@ import Image from "next/image";
  import CallofDuty from '../Image/Subscribe.jpg';
 const Subscribe = () => {
   return (
-     <section className='w-screen py-15 bg-gray-900 flex items-center justify-center ' >
+     <section className='w-screen py-15 bg-gray-900 flex items-center justify-center' data-aos="fade-up">
         <div className='max-w-5xl w-full mx-auto h-[60vh] bg-blue-200 flex items-center justify-center relative ' >
          <Image src = {CallofDuty} alt = "image" fill={true} className = " object-cover" />
          <div className='relative z-5 max-w-4xl w-full justify-center flex flex-col items-center '>

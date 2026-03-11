@@ -14,7 +14,7 @@ const Blog = async({params}) => {
   return (
     <>
     <Banner content={'BLOG'}/>
-    <div className='w-full bg-black '>
+    <div className='w-full bg-black' data-aos="fade-up">
       <div className='w-full max-w-7xl mx-auto grid grid-cols-1
       gap-10 lg:grid-cols-[2fr_1fr] py-10 px-5'>
       <ul className='space-y-8 w-full max-w-3xl lg:max-w-none mx-auto lg:mx-0 '>

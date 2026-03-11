@@ -10,7 +10,7 @@ import Dropdown from './Dropdown/page';
 const Navbar = () => {
     // console.log('server')
   return (
-   <header className='fixed top-0 left-0 right-0 z-100 '>
+   <header className='fixed top-0 left-0 right-0 z-100' data-aos="fade-up">
     <nav className='w-full bg-black/65 hidden lg:flex items-center justify-between px-8 py-5'>
         <h1 className='font-extrabold text-white text-3xl tracking-wider'>TINJA</h1>
         <ul className='hidden lg:flex  items-center gap-x-8 w-full justify-center'>

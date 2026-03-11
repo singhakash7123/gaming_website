@@ -4,7 +4,7 @@ import HeroImg from '../../Image/Call_of_Duty.jpg'
 import Link from 'next/link'
 const Hero = () => {
   return (
-    <section className='min-h-screen w-screen  flex items-center justify-start bg-black'>
+    <section className='min-h-screen w-screen  flex items-center justify-start bg-black' data-aos="fade-up">
         <Image src={HeroImg} alt='Image' fill className='object-cover' />
         <div className='relative z-10 max-w-2xl px-5'>
             <h1 className='font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white' >STELLAR FRONTIER</h1>

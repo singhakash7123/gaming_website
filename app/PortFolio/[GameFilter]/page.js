@@ -15,7 +15,7 @@ const GameFilter = async ({params}) => {
   })
 
  const RenderLists = filtered.map((item)=>
-  <List key={item.id} content={item.name} image={item.image} category={item.category}   />
+  <List key={item.id} content={item.name} image={item.image} category={item.category} slug={item.slug}  />
 )
   
   return (

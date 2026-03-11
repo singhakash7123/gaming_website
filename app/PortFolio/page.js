@@ -1,7 +1,7 @@
 
 import React from 'react'
 import Banner from '../Banner/page.js'
-import GameList from './GameList/page.js'
+import List from './List/page.js'
 import array from '../Data/PortFolio.js'
 import Category from '../../Component/Category/page.js'
 const PortFolio = async ({params}) => {
@@ -15,11 +15,11 @@ const PortFolio = async ({params}) => {
   // })
 
  const RenderLists = array.map((item)=>
-  <GameList  key={item.id} basepath='PortFolio' content={item.name} image={item.image} category={item.category} />
+  <List  key={item.id} basepath='PortFolio' content={item.name} image={item.image} category={item.category} slug={item.slug} />
 )
   
   return (
-    <section className='bg-gray-900'>
+    <section className='bg-gray-900' data-aos="fade-up">
       <Banner content={'PORTFOLIO'}/>
     <div className='w-full max-w-7xl mx-auto bg-gray-900 '>
     <div className=' w-full max-w-6xl mx-auto  py-5 flex items-center justify-center gap-x-5 text-xs md:text-sm text-white '>

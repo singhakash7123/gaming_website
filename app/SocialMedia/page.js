@@ -2,7 +2,7 @@ import React from 'react'
 
 const SocialMedia = () => {
   return (
-    <section className='w-screen min-h-[40vh] bg-red-900 flex flex-col items-center justify-center py-10 ' >
+    <section className='w-screen min-h-[40vh] bg-red-900 flex flex-col items-center justify-center py-10 ' data-aos="fade-up">
         <p className='text-purple-500 text-center text-xm font-semibold' >OFFICIAL</p>
         <h2 className='text-center text-white font-extrabold text-4xl '> CONNECT EVERYWHERE</h2>
         <div className='max-w-5xl w-full flex flex-wrap items-start md:items-center justify-center gap-8 mt-8 '>

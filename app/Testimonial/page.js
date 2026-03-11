@@ -9,7 +9,7 @@ const TestimonialPage = () => {
   return (
     <>
    <Banner content='Testimonials' />
-   <div className='bg-black py-15'>
+   <div className='bg-black py-15' data-aos="fade-up">
     <div className='max-w-6xl grid grid-col-1 md:grid-cols-2 mx-auto gap-8 place-items-center px-3 ' >
    
    {RenderTestimonial}

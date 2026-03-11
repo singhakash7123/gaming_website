@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className=' h-screen bg-gray-900  w-screen '>
+        <footer className=' h-screen bg-gray-900  w-screen ' data-aos="fade-up">
            <div className='max-w-6xl w-full mx-auto h-1/2 flex items-center  '>
                 <div className='max-w-6xl w-full  flex flex-wrap items-center
            lg:justify-between mx-auto px-5 gap-x-8 gap-y-5 lg:gap-y-0 '>

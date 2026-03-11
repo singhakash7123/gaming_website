@@ -9,7 +9,7 @@ import team_03 from '../../Image/team_03.jpg'
 
 const Team = () => {
   return (
-    <section className='text-white py-10 bg-black'>
+    <section className='text-white py-10 bg-black' data-aos="fade-up">
         <div className='max-w-7xl w-full mx-auto px-4'>
             <div className='flex flex-col md:flex-row items-start  md:items-center justify-between'>
                 <div className='flex flex-col items-start gap-y-1'>
